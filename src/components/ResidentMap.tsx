@@ -42,37 +42,103 @@ export function ResidentMap() {
           <div className="absolute bottom-36 left-12 text-gray-700">Stadium</div>
           <div className="absolute top-56 left-32 text-gray-700">Main St</div>
 
-          {/* Your area marker */}
-          <div className="absolute top-40 left-48 flex flex-col items-center">
-            <div className="bg-teal-600 rounded-full p-2 shadow-lg">
-              <Home className="w-5 h-5 text-white" />
-            </div>
-            <div className="mt-1 text-teal-900 bg-white px-2 py-0.5 rounded shadow-sm text-xs">
-              Your area
-            </div>
-          </div>
-        </div>
+                              {/* Your area marker */}
 
-        {/* Legend Card */}
-        <div className="absolute bottom-4 left-4 right-4">
-          <Card>
-            <div className="flex items-center justify-around">
-              <div className="flex items-center gap-2">
-                <div className="w-3 h-3 bg-blue-200 rounded-full"></div>
-                <span>Light snow</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <div className="w-3 h-3 bg-blue-400 rounded-full"></div>
-                <span>Moderate</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <div className="w-3 h-3 bg-blue-600 rounded-full"></div>
-                <span>Heavier</span>
-              </div>
-            </div>
-          </Card>
-        </div>
-      </div>
+                              <div className="absolute top-40 left-48 flex flex-col items-center">
+
+                                <div className="bg-teal-600 rounded-full p-2 shadow-lg">
+
+                                  <Home className="w-5 h-5 text-white" />
+
+                                </div>
+
+                                <div className="mt-1 text-teal-900 bg-white px-2 py-0.5 rounded shadow-sm text-xs">
+
+                                  Your area
+
+                                </div>
+
+                              </div>
+
+                            </div>
+
+                    
+
+                                            {/* Legend Card */}
+
+                    
+
+                                            <div className="absolute bottom-16 left-4 right-4 z-40">
+
+                    
+
+                                              <Card>
+
+                    
+
+                                                <div className="flex items-center justify-around">
+
+                    
+
+                                                  <div className="flex items-center gap-2">
+
+                    
+
+                                                    <div className="w-3 h-3 bg-blue-200 rounded-full"></div>
+
+                    
+
+                                                    <span>Light snow</span>
+
+                    
+
+                                                  </div>
+
+                    
+
+                                                  <div className="flex items-center gap-2">
+
+                    
+
+                                                    <div className="w-3 h-3 bg-blue-400 rounded-full"></div>
+
+                    
+
+                                                    <span>Moderate</span>
+
+                    
+
+                                                  </div>
+
+                    
+
+                                                  <div className="flex items-center gap-2">
+
+                    
+
+                                                    <div className="w-3 h-3 bg-blue-600 rounded-full"></div>
+
+                    
+
+                                                    <span>Heavier</span>
+
+                    
+
+                                                  </div>
+
+                    
+
+                                                </div>
+
+                    
+
+                                              </Card>
+
+                    
+
+                                            </div>
+
+                          </div>
 
       <BottomNavInteractive mode="resident" />
     </PhoneFrame>
