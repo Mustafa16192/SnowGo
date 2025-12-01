@@ -128,7 +128,7 @@ export function ProfileVolunteer() {
           </Card>
 
           {/* Log Out Button */}
-          <div className="pt-4 pb-8 text-center">
+          <div className="pt-4 pb-24 text-center">
             <button 
               onClick={() => navigate('/')}
               className="text-red-600 py-2"

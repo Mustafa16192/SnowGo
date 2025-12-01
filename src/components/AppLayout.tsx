@@ -1,5 +1,5 @@
 import { Link } from 'react-router';
-import { Snowflake, Users, HandHeart, TrendingUp, MapPin, Shield, ArrowRight, Sparkles } from 'lucide-react';
+import { Snowflake, Users, HandHeart, TrendingUp, MapPin, Shield, ArrowRight, Sparkles, Palette } from 'lucide-react';
 
 export function AppLayout() {
   return (
@@ -39,7 +39,7 @@ export function AppLayout() {
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-20">
             {/* Resident Journey */}
             <Link 
-              to="/splash" 
+              to="/role-selection" 
               className="group bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/10 hover:border-teal-500/50 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-teal-500/20"
             >
               <div className="bg-teal-500/20 w-16 h-16 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-teal-500/30 transition-all">
@@ -186,6 +186,27 @@ export function AppLayout() {
                   <span>Explore</span>
                   <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                 </div>
+              </Link>
+            </div>
+
+            {/* Design System Card */}
+            <div className="mt-8 max-w-2xl mx-auto">
+              <Link 
+                to="/design-system"
+                className="group bg-gradient-to-br from-purple-500/10 to-pink-500/10 backdrop-blur-sm border border-purple-500/30 rounded-xl p-6 hover:bg-purple-500/20 hover:border-purple-500/50 transition-all hover:scale-105 flex items-center justify-between"
+              >
+                <div className="flex items-center gap-4">
+                  <div className="bg-purple-500/20 w-12 h-12 rounded-xl flex items-center justify-center">
+                    <Palette className="w-6 h-6 text-purple-400" />
+                  </div>
+                  <div>
+                    <h3 className="mb-1">Design System</h3>
+                    <p className="text-gray-400 text-sm">
+                      View all colors, buttons, cards, and component states
+                    </p>
+                  </div>
+                </div>
+                <ArrowRight className="w-5 h-5 text-purple-400 group-hover:translate-x-2 transition-transform" />
               </Link>
             </div>
           </div>

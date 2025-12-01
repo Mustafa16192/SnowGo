@@ -1,6 +1,6 @@
 import { PhoneFrame } from './PhoneFrame';
 import { StatusBar } from './StatusBar';
-import { BottomNav } from './BottomNav';
+import { BottomNavInteractive } from './BottomNavInteractive';
 import { Card } from './Card';
 import { ArrowLeft, ExternalLink } from 'lucide-react';
 
@@ -91,7 +91,7 @@ export function VolunteerTaskDetailAccepted() {
         </div>
       </div>
 
-      <BottomNav active="requests" />
+      <BottomNavInteractive mode="volunteer" />
     </PhoneFrame>
   );
 }

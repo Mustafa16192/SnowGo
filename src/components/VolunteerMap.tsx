@@ -19,7 +19,7 @@ export function VolunteerMap() {
 
       <div className="h-[calc(100%-124px)] bg-gray-50 relative">
         {/* Map Area */}
-        <div className="h-full bg-gradient-to-br from-blue-50 to-blue-100 relative overflow-hidden">
+        <div className="h-full bg-gradient-to-br from-blue-50 to-blue-100 relative overflow-hidden pb-32">
           {/* Street grid - simplified */}
           <div className="absolute inset-0">
             {/* Vertical streets */}
@@ -72,20 +72,20 @@ export function VolunteerMap() {
               <MapPin className="w-5 h-5 text-white fill-white" />
             </div>
           </div>
-        </div>
 
-        {/* Info Card */}
-        <div className="absolute bottom-4 left-4 right-4">
-          <Card>
-            <div className="mb-2">Open requests nearby</div>
-            <p className="text-gray-600 mb-3">Tap a pin to see who needs help, or use the Requests tab for a full list.</p>
-            <button 
-              onClick={() => navigate('/volunteer/requests')}
-              className="w-full bg-teal-600 text-white py-2 px-6 rounded-lg"
-            >
-              Go to Requests
-            </button>
-          </Card>
+          {/* Info Card - positioned with more bottom margin to avoid navbar */}
+          <div className="absolute bottom-20 left-4 right-4 z-10">
+            <Card>
+              <div className="mb-2">Open requests nearby</div>
+              <p className="text-gray-600 mb-3">Tap a pin to see who needs help, or use the Requests tab for a full list.</p>
+              <button 
+                onClick={() => navigate('/volunteer/requests')}
+                className="w-full bg-teal-600 text-white py-2 px-6 rounded-lg transition-all active:scale-95"
+              >
+                Go to Requests
+              </button>
+            </Card>
+          </div>
         </div>
       </div>
 

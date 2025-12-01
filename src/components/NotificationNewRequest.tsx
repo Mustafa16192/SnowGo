@@ -8,7 +8,7 @@ export function NotificationNewRequest() {
     <PhoneFrame>
       <StatusBar />
       
-      <div className="h-[calc(100%-44px)] bg-gray-50">
+      <div className="h-[calc(100%-54px)] bg-gray-50">
         {/* Notification Banner */}
         <div className="bg-teal-600 text-white p-4 shadow-lg">
           <div className="flex items-start gap-3">

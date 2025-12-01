@@ -1,6 +1,6 @@
 import { PhoneFrame } from './PhoneFrame';
 import { StatusBar } from './StatusBar';
-import { BottomNav } from './BottomNav';
+import { BottomNavInteractive } from './BottomNavInteractive';
 import { Card } from './Card';
 import { ChevronRight, Snowflake } from 'lucide-react';
 
@@ -74,7 +74,7 @@ export function VolunteerHomeEmpty() {
         </div>
       </div>
 
-      <BottomNav active="home" />
+      <BottomNavInteractive mode="volunteer" />
     </PhoneFrame>
   );
 }

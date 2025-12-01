@@ -18,7 +18,7 @@ export function SplashScreen() {
     <PhoneFrame>
       <StatusBar />
       
-      <div className="h-[calc(100%-44px)] bg-gradient-to-br from-teal-500 to-teal-600 flex flex-col items-center justify-center">
+      <div className="h-[calc(100%-54px)] bg-gradient-to-br from-teal-500 to-teal-600 flex flex-col items-center justify-center">
         <div className="bg-white rounded-3xl p-6 mb-4 shadow-lg">
           <Snowflake className="w-16 h-16 text-teal-600" />
         </div>

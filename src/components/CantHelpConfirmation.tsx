@@ -1,6 +1,6 @@
 import { PhoneFrame } from './PhoneFrame';
 import { StatusBar } from './StatusBar';
-import { BottomNav } from './BottomNav';
+import { BottomNavInteractive } from './BottomNavInteractive';
 import { Card } from './Card';
 import { ArrowLeft, AlertCircle } from 'lucide-react';
 
@@ -51,7 +51,7 @@ export function CantHelpConfirmation() {
         </div>
       </div>
 
-      <BottomNav active="requests" />
+      <BottomNavInteractive mode="volunteer" />
     </PhoneFrame>
   );
 }

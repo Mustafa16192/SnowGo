@@ -22,7 +22,7 @@ export function Login() {
         <div className="flex-1 text-center mr-6">Log in</div>
       </div>
 
-      <div className="h-[calc(100%-56px)] overflow-y-auto bg-gray-50">
+      <div className="h-[calc(100%-68px)] overflow-y-auto bg-gray-50">
         <div className="p-4 space-y-6 pt-12">
           <div className="text-center">
             <h1 className="mb-2">Welcome back</h1>

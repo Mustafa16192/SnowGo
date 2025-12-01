@@ -11,7 +11,7 @@ export function OnboardingResident3() {
     <PhoneFrame>
       <StatusBar />
       
-      <div className="h-[calc(100%-44px)] bg-gray-50 flex flex-col">
+      <div className="h-[calc(100%-54px)] bg-gray-50 flex flex-col">
         <div className="flex-1 flex flex-col items-center justify-center p-6 text-center">
           <div className="w-32 h-32 bg-teal-100 rounded-full flex items-center justify-center mb-6">
             <Heart className="w-16 h-16 text-teal-600" />

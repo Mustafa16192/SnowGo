@@ -2,11 +2,21 @@ import { PhoneFrame } from './PhoneFrame';
 import { StatusBar } from './StatusBar';
 import { InteractiveCard } from './InteractiveCard';
 import { PrimaryButton } from './PrimaryButton';
+import { AddressPickerSheet } from './AddressPickerSheet';
 import { ArrowLeft } from 'lucide-react';
 import { useNavigate, Link } from 'react-router';
+import { useState } from 'react';
 
 export function SignupResident() {
   const navigate = useNavigate();
+  const [isAddressSheetOpen, setIsAddressSheetOpen] = useState(false);
+  const [address, setAddress] = useState('');
+  const [city, setCity] = useState('');
+
+  const handleAddressConfirm = (selectedAddress: string, selectedCity: string) => {
+    setAddress(selectedAddress);
+    setCity(selectedCity);
+  };
 
   return (
     <PhoneFrame>
@@ -22,7 +32,7 @@ export function SignupResident() {
         <div className="flex-1 text-center mr-6">Create account</div>
       </div>
 
-      <div className="h-[calc(100%-56px)] overflow-y-auto bg-gray-50">
+      <div className="h-[calc(100%-68px)] overflow-y-auto bg-gray-50 relative">
         <div className="p-4 space-y-4">
           <div className="pt-2 pb-2">
             <h2 className="mb-1">Welcome to SnowGo</h2>
@@ -62,13 +72,18 @@ export function SignupResident() {
                 <label className="block text-gray-700 mb-2">Home address</label>
                 <input 
                   type="text" 
-                  placeholder="309 W Hoover Ave"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg mb-2 transition-all focus:border-teal-600 focus:outline-none focus:ring-2 focus:ring-teal-600/20"
+                  placeholder="Tap to add your address"
+                  value={address}
+                  onClick={() => setIsAddressSheetOpen(true)}
+                  readOnly
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg mb-2 transition-all focus:border-teal-600 focus:outline-none focus:ring-2 focus:ring-teal-600/20 cursor-pointer bg-white"
                 />
                 <input 
                   type="text" 
-                  placeholder="Ann Arbor, MI 48104"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg transition-all focus:border-teal-600 focus:outline-none focus:ring-2 focus:ring-teal-600/20"
+                  placeholder="City, State, ZIP"
+                  value={city}
+                  readOnly
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg transition-all focus:border-teal-600 focus:outline-none focus:ring-2 focus:ring-teal-600/20 bg-white"
                 />
               </div>
 
@@ -99,6 +114,13 @@ export function SignupResident() {
             <Link to="/login" className="text-teal-600 transition-all active:text-teal-700">Log in</Link>
           </div>
         </div>
+
+        {/* Address Picker Sheet */}
+        <AddressPickerSheet
+          isOpen={isAddressSheetOpen}
+          onClose={() => setIsAddressSheetOpen(false)}
+          onConfirm={handleAddressConfirm}
+        />
       </div>
     </PhoneFrame>
   );

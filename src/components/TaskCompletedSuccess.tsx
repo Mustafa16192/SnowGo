@@ -11,7 +11,7 @@ export function TaskCompletedSuccess() {
     <PhoneFrame>
       <StatusBar />
       
-      <div className="h-[calc(100%-44px)] bg-gray-50 flex flex-col items-center justify-center p-6">
+      <div className="h-[calc(100%-54px)] bg-gray-50 flex flex-col items-center justify-center p-6">
         <div className="w-20 h-20 bg-yellow-100 rounded-full flex items-center justify-center mb-6">
           <Award className="w-12 h-12 text-yellow-600" />
         </div>

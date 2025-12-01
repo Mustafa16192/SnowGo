@@ -29,7 +29,7 @@ export function BottomNavInteractive({ mode }: BottomNavInteractiveProps) {
   ];
 
   return (
-    <div className="absolute bottom-0 left-0 right-0 h-20 bg-white border-t border-gray-200 px-4 z-50">
+    <div className="absolute bottom-0 left-0 right-0 h-20 bg-white border-t border-gray-200 px-4">
       <div className="flex items-center justify-around h-full pb-2">
         {tabs.map((tab) => {
           const Icon = tab.icon;

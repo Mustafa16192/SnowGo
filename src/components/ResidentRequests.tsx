@@ -2,6 +2,8 @@ import { PhoneFrame } from './PhoneFrame';
 import { StatusBar } from './StatusBar';
 import { BottomNavInteractive } from './BottomNavInteractive';
 import { InteractiveCard } from './InteractiveCard';
+import { PrimaryButton } from './PrimaryButton';
+import { Plus } from 'lucide-react';
 import { useNavigate } from 'react-router';
 
 export function ResidentRequests() {
@@ -18,6 +20,16 @@ export function ResidentRequests() {
 
       <div className="h-[calc(100%-124px)] overflow-y-auto bg-gray-50">
         <div className="p-4 space-y-3">
+          {/* Add New Request Button */}
+          <PrimaryButton 
+            fullWidth
+            onClick={() => navigate('/resident/request-help')}
+            className="flex items-center justify-center gap-2"
+          >
+            <Plus className="w-5 h-5" />
+            New Request
+          </PrimaryButton>
+
           {/* Request Card 1 */}
           <InteractiveCard 
             clickable

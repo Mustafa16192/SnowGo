@@ -9,6 +9,7 @@ import { OnboardingVolunteer1 } from '../components/OnboardingVolunteer1';
 import { OnboardingVolunteer2 } from '../components/OnboardingVolunteer2';
 import { OnboardingVolunteer3 } from '../components/OnboardingVolunteer3';
 import { SignupResident } from '../components/SignupResident';
+import { SignupVolunteer } from '../components/SignupVolunteer';
 import { Login } from '../components/Login';
 import { ResidentHome } from '../components/ResidentHome';
 import { ResidentHomeEmpty } from '../components/ResidentHomeEmpty';
@@ -43,11 +44,16 @@ import { NotificationAccepted } from '../components/NotificationAccepted';
 import { NotificationNewRequest } from '../components/NotificationNewRequest';
 import { ErrorState } from '../components/ErrorState';
 import { LoadingState } from '../components/LoadingState';
+import { DesignSystem } from '../components/DesignSystem';
 
 export const router = createBrowserRouter([
   {
     path: '/',
     element: <AppLayout />,
+  },
+  {
+    path: '/design-system',
+    element: <DesignSystem />,
   },
   {
     path: '/splash',
@@ -64,6 +70,10 @@ export const router = createBrowserRouter([
   {
     path: '/signup',
     element: <SignupResident />,
+  },
+  {
+    path: '/signup/volunteer',
+    element: <SignupVolunteer />,
   },
   // Resident Onboarding
   {
